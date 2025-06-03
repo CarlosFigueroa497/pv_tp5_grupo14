@@ -1,14 +1,14 @@
 function Header() {
   return (
     <header style={{
-      backgroundColor: '#fff',
+      backgroundColor: "white",
       color: '#000',
-      padding: '1rem',
-      textAlign: 'center',
+      padding: '0.5rem 1rem',
+      textAlign: 'left',
       borderBottom: '1px solid #ccc'
     }}>
       <h1 style={{ margin: 0 }}>
-        TP N°5 <span style={{ fontWeight: 'normal' }}>| 🏫 UNJU</span>
+        🏫 UNJU <span style={{ fontWeight: 'normal' }}>| TP N°5</span>
       </h1>
     </header>
   )

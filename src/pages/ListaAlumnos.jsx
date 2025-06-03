@@ -10,11 +10,12 @@ function ListaAlumnos({ alumnos, setAlumnos }) {
   };
 
   return (
-    <div>
-      <h2>Lista de Alumnos</h2>
-      {alumnos.length === 0 ? (
-        <p>No hay alumnos cargados.</p>
-      ) : (
+  <div style={{ textAlign: 'center' }}>
+    <h2>Lista de Alumnos</h2>
+    {alumnos.length === 0 ? (
+      <p>No hay alumnos cargados.</p>
+    ) : (
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
         <table border="1" cellPadding="8">
           <thead>
             <tr>
@@ -39,9 +40,10 @@ function ListaAlumnos({ alumnos, setAlumnos }) {
             ))}
           </tbody>
         </table>
-      )}
-    </div>
-  );
+      </div>
+    )}
+  </div>
+);
 }
 
 export default ListaAlumnos;
