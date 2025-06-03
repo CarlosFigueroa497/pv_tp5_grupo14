@@ -5,11 +5,12 @@ import AgregarAlumno from './pages/AgregarAlumno'
 import EditarAlumno from './pages/EditarAlumno'
 import DetalleAlumno from './pages/DetalleAlumno'
 import AcercaDe from './pages/AcercaDe'
+import Header from './components/Header'
 import NavBar from './components/NavBar'
 import { useState } from 'react';
 
 function App() {
-  
+
   const [alumnos, setAlumnos] = useState([
     {
       id: 'APU00999',
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <>
+      <Header /> { }
       <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
