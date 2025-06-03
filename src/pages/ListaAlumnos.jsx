@@ -1,9 +1,24 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 
 function ListaAlumnos({ alumnos, setAlumnos }) {
+  const location = useLocation();
   const [mensajeExito, setMensajeExito] = useState("");
+
+    // Mostrar mensaje que llega desde la navegación (por agregar alumno)
+  useEffect(() => {
+    if (location.state?.mensajeExito) {
+      setMensajeExito(location.state.mensajeExito);
+      // Limpiar el mensaje luego de 3 segundos
+      const timer = setTimeout(() => setMensajeExito(""), 3000);
+
+      // Limpia el estado para que no vuelva a mostrar el mensaje al re-renderizar
+      window.history.replaceState({}, document.title);
+
+      return () => clearTimeout(timer);
+    }
+  }, [location.state]);
   const handleEliminar = (id) => {
     const confirmar = confirm('¿Esta seguro que desea eliminar este alumno?');
     if (confirmar) {

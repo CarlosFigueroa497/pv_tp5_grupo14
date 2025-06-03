@@ -34,7 +34,7 @@ function AgregarAlumno({ setAlumnos }) {
     setAlumnos((prevAlumnos) => [...prevAlumnos, nuevoAlumno]);
 
     // redirigir a la lista
-    navigate('/alumnos');
+navigate('/alumnos', { state: { mensajeExito: "✅ Alumno agregado con éxito" } });
   };
 
   return (
