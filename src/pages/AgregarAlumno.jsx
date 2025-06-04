@@ -83,7 +83,7 @@ function AgregarAlumno({ setAlumnos }) {
               { value: 4, label: 'Cuarto' },
               { value: 5, label: 'Quinto' }
             ].map(({ value, label }) => (
-              <option key={value} value={value}>{label}</option>
+              <option key={value} value={label}>{label}</option>
             ))}
           </select>
         </label>

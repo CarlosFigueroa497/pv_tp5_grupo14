@@ -89,11 +89,11 @@ function EditarAlumno({ alumnos, setAlumnos }) {
             style={inputStyle}
           >
             <option value="">Seleccione un curso</option>
-            <option value="1">Primero</option>
-            <option value="2">Segundo</option>
-            <option value="3">Tercero</option>
-            <option value="4">Cuarto</option>
-            <option value="5">Quinto</option>
+          <option value="Primero">Primero</option>
+<option value="Segundo">Segundo</option>
+<option value="Tercero">Tercero</option>
+<option value="Cuarto">Cuarto</option>
+<option value="Quinto">Quinto</option>
           </select>
         </label>
         <label>Email:
