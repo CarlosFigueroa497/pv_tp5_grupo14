@@ -24,12 +24,10 @@ function AgregarAlumno({ setAlumnos }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
     if (!nuevoAlumno.id || !nuevoAlumno.nombre || !nuevoAlumno.apellido) {
       alert('Por favor, completá al menos LU, nombre y apellido.');
       return;
     }
-
 
     setAlumnos((prevAlumnos) => [...prevAlumnos, nuevoAlumno]);
     navigate('/alumnos', { state: { mensajeExito: "✅ Alumno agregado con éxito" } });
@@ -71,7 +69,23 @@ function AgregarAlumno({ setAlumnos }) {
           <input name="apellido" value={nuevoAlumno.apellido} onChange={handleChange} style={inputStyle} />
         </label>
         <label>Curso:
-          <input name="curso" value={nuevoAlumno.curso} onChange={handleChange} style={inputStyle} />
+          <select
+            name="curso"
+            value={nuevoAlumno.curso}
+            onChange={handleChange}
+            style={inputStyle}
+          >
+            <option value="">Seleccione un curso</option>
+            {[
+              { value: 1, label: 'Primero' },
+              { value: 2, label: 'Segundo' },
+              { value: 3, label: 'Tercero' },
+              { value: 4, label: 'Cuarto' },
+              { value: 5, label: 'Quinto' }
+            ].map(({ value, label }) => (
+              <option key={value} value={value}>{label}</option>
+            ))}
+          </select>
         </label>
         <label>Email:
           <input name="email" value={nuevoAlumno.email} onChange={handleChange} style={inputStyle} />
@@ -91,4 +105,3 @@ function AgregarAlumno({ setAlumnos }) {
 }
 
 export default AgregarAlumno;
-
