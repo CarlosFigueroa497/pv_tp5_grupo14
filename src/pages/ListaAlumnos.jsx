@@ -64,9 +64,11 @@ function ListaAlumnos({ alumnos, setAlumnos }) {
                 <td>{alumno.nombre} {alumno.apellido}</td>
                 <td>{alumno.curso}</td>
                 <td>
-                  <Link to={`/alumnos/${alumno.id}`}>Ver</Link>{" | "}
-                  <Link to={`/alumnos/${alumno.id}/editar`}>Editar</Link>{" | "}
-                  <button onClick={() => handleEliminar(alumno.id)}>Eliminar</button>
+          
+  <Link to={`/alumnos/${alumno.id}`} className="action-link ver">Detalles</Link>
+  <Link to={`/alumnos/${alumno.id}/editar`} className="action-link editar">Editar</Link>
+  <button onClick={() => handleEliminar(alumno.id)} className="action-link eliminar">Eliminar</button>
+
                 </td>
               </tr>
             ))}
