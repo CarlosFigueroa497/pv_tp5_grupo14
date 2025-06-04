@@ -39,7 +39,7 @@ function EditarAlumno({ alumnos, setAlumnos }) {
     );
 
     setAlumnos(alumnosActualizados);
-    navigate('/alumnos');
+    navigate('/alumnos', { state: { mensajeExito: '✅ Alumno editado con éxito' } });
   };
 
   if (!alumnoExistente) {

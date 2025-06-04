@@ -9,9 +9,9 @@ function AcercaDe() {
 
       <h3 style={{ marginTop: "1rem" }}>Integrantes del Grupo 14:</h3>
       <ul>
-        <li>Carlos Figueroa – GitHub: <a href="https://github.com/CarlosFigueroa497" target="_blank" rel="noreferrer">CarlosFigueroa497</a></li>
-        <li>Briones Juan Nicolas – GitHub: <a href="https://github.com/juanicolas619" target="_blank" rel="noreferrer">juanicolas619</a></li>
-        <li>Tapia Moraña Hernan – GitHub: <a href="https://github.com/HernanJairoMT" target="_blank" rel="noreferrer">HernanJairoMT</a></li>
+        <li>Carlos Figueroa - GitHub: <a href="https://github.com/CarlosFigueroa497" target="_blank" rel="noreferrer">CarlosFigueroa497</a></li>
+        <li>Briones Juan Nicolas - GitHub: <a href="https://github.com/juanicolas619" target="_blank" rel="noreferrer">juanicolas619</a></li>
+        <li>Tapia Moraña Hernan - GitHub: <a href="https://github.com/HernanJairoMT" target="_blank" rel="noreferrer">HernanJairoMT</a></li>
       </ul>
 
       <p style={{ marginTop: "1rem" }}>
